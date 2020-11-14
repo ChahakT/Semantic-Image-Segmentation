@@ -28,16 +28,22 @@ We implemented 4 models:
 >Naive Bayes
 
 ● 3*3 neighbourhood of each pixel ( RGB image)
+
 ● Data point of length 27 was mapped to one of 150 Classes
+
 ● Prior and likelihood probabilities learned from 20,000 images
 
 >Feature Based Classification
 
 ● 9*9 neighbourhood of each pixel ( gray image) was analysed and five(5) Haralick features from co-occurrence matrices were computed, namely:
   a) Angular Second Moment
+  
   b) Variance
+  
   c) Entropy  
+  
   d) Correlation
+  
   e) Inverse difference moment
 
 
