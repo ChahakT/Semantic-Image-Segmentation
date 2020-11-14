@@ -36,16 +36,8 @@ We implemented 4 models:
 >Feature Based Classification
 
 ● 9*9 neighbourhood of each pixel ( gray image) was analysed and five(5) Haralick features from co-occurrence matrices were computed, namely:
-  a) Angular Second Moment
+  Angular Second Moment, Variance, Entropy, Correlation and Inverse Difference Moment
   
-  b) Variance
   
-  c) Entropy  
-  
-  d) Correlation
-  
-  e) Inverse difference moment
-
-
 
 
