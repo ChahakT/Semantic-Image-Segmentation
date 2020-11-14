@@ -1,4 +1,4 @@
-# Semantic-Image-Segmentation
+# Semantic Image Segmentation
 
 **Scene Parsing Using Image Segmentation and Semantic Labelling**
 
