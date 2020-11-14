@@ -38,6 +38,34 @@ We implemented 4 models:
 ● 9*9 neighbourhood of each pixel ( gray image) was analysed and five(5) Haralick features from co-occurrence matrices were computed, namely:
   Angular Second Moment, Variance, Entropy, Correlation and Inverse Difference Moment
   
+>2D Bi-Directional RNN architecture
+
+● Images are passed through 2 CNN layers with stride of 2 and 3 respectively. Then these images of
+dimensions, 64 x 64 x 16, are row wise scanned pixel by pixel and column wise scanning of resulted
+image pixel by pixel which results in a image of dimension 64 x 64 x128
+
+>Ensemble averaging
+
+● Intuition: FCN model is more responsive to certain images, similar is the case with Segnet model. For a
+test image, we find its correlation with training images to find which model is best suited. Our own
+model learns this correlation and gives a corresponding weightage to FCN or Segnet.
+
+To get a probability of 1 for class c1,
+
+a* x1 + (1-α)*x2 =1
+
+ x1: Segnet output
+ 
+ x2: FCN output
+ 
+We learned a model which will predict a weight given to a pre-trained image segmentation model if
+image was provided as an input to the ensemble of the two models as shown in the ensemble
+architecture.
+
+Training loss: (1-(α*x1 +(1-α)*x2))^2
+
+
+  
   
 
 
