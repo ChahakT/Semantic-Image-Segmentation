@@ -16,3 +16,30 @@ object occurrence in daily scene.
 To evaluate the segmentation algorithms, we will take the mean of the pixel-wise accuracy as
 the final score. Pixel-wise accuracy indicates the ratio of pixels which are correctly predicted,
 averaged over all the 150 semantic categories.
+
+**Methodology**
+
+We implemented 4 models:
+1. Naive Bayes
+2. Feature Based Classification
+3. 2D Bi-Directional RNN architecture
+4. Ensemble averaging of state-of-art networks
+
+>Naive Bayes
+
+● 3*3 neighbourhood of each pixel ( RGB image)
+● Data point of length 27 was mapped to one of 150 Classes
+● Prior and likelihood probabilities learned from 20,000 images
+
+>Feature Based Classification
+
+● 9*9 neighbourhood of each pixel ( gray image) was analysed and five(5) Haralick features from co-occurrence matrices were computed, namely:
+  a) Angular Second Moment
+  b) Variance
+  c) Entropy  
+  d) Correlation
+  e) Inverse difference moment
+
+
+
+
